@@ -47,9 +47,9 @@ export default function Navegacion() {
                         Notificaciones
                     </a>
 
-                    <a href="#" class="flex items-center hover:text-sky-200">
+                    <a href="/" class="flex items-center hover:text-sky-200">
                         <span class="material-symbols-outlined mr-3">
-                            edit_note
+                            login
                         </span>
                         Opciones
                     </a>

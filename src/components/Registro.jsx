@@ -1,10 +1,13 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const baseUrl = import.meta.env.MY_APP_URL;
 
 export const Registro = () => {
+
+    const navigate = useNavigate();
 
     const [dataForm, setDataForm] = useState({
         nombre_usuario: "",
@@ -30,9 +33,11 @@ export const Registro = () => {
         const url = baseUrl + '/usuarioCrud';
 
         const result = await axios.post(url, dataForm);
+        const resultData = result.data;
 
-        const resultData = (await result).data;
         console.log(resultData);
+
+        navigate('/muro')
        
 
     }
